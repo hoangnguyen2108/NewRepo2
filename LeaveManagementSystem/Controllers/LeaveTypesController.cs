@@ -6,22 +6,35 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LeaveManagementSystem.Data;
+using LeaveManagementSystem.Models.LeaveTypes;
+
 
 namespace LeaveManagementSystem.Controllers
 {
     public class LeaveTypesController : Controller
     {
         private readonly ApplicationDbContext _context;
+      //  private readonly IMapper _mapper;
 
         public LeaveTypesController(ApplicationDbContext context)
         {
             _context = context;
+         //   this._mapper = mapper;
         }
 
         // GET: LeaveTypes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.LeaveTypes.ToListAsync());
+            var data = await _context.LeaveTypes.ToListAsync();
+            // Manually mapping the data to the view model is not necessary if you are using AutoMapper.
+                 var viewData = data.Select(x => new IndexVM
+                 {
+                   Id = x.Id,
+                   Name = x.Name,
+                    Days = x.NumberOfDays
+                });
+            
+            return View(viewData);
         }
 
         // GET: LeaveTypes/Details/5

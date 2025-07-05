@@ -1,4 +1,5 @@
 ﻿using LeaveManagementSystem.Controllers;
+using LeaveManagementSystem.Models.LeaveTypes;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,7 +13,8 @@ namespace LeaveManagementSystem.Data
         }
 
         public DbSet<LeaveType> LeaveTypes { get; set; }
-
         
+
+
     }
 }
