@@ -1,4 +1,5 @@
 using LeaveManagementSystem.Data;
+using LeaveManagementSystem.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +18,9 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 // THis is for AutoMapper but eh I dont prefer it this way
 // builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 // builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
+// this code mean when someone injects/need ILeaveTypeService, it will get LeaveTypeService
+builder.Services.AddScoped<ILeaveTypeService, LeaveTypeService>();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
