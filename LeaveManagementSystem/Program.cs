@@ -1,6 +1,7 @@
 using LeaveManagementSystem.Data;
 using LeaveManagementSystem.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -21,8 +22,10 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 // this code mean when someone injects/need ILeaveTypeService, it will get LeaveTypeService
 builder.Services.AddScoped<ILeaveTypeService, LeaveTypeService>();
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 

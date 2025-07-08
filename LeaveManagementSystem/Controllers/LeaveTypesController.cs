@@ -8,10 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using LeaveManagementSystem.Data;
 using LeaveManagementSystem.Models.LeaveTypes;
 using LeaveManagementSystem.Services;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace LeaveManagementSystem.Controllers
 {
+    [Authorize(Roles = "Supervisor")]
     public class LeaveTypesController(ILeaveTypeService leaveTypeService) : Controller
     {
         private readonly ILeaveTypeService _leaveTypeService = leaveTypeService;
