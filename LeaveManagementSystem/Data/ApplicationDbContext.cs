@@ -84,6 +84,8 @@ namespace LeaveManagementSystem.Data
 
 
         public DbSet<LeaveType> LeaveTypes { get; set; }
+        public DbSet<LeaveALocation> leaveALocations { get; set; }
+        public DbSet<Period> Periods { get; set; }
         
 
 

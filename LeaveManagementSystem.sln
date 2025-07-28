@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36212.18 d17.14
+VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagementSystem", "LeaveManagementSystem\LeaveManagementSystem.csproj", "{8E29BB22-9912-489C-884A-7FD31034211B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagementSystem.Common", "LeaveManagementSystem.Common\LeaveManagementSystem.Common.csproj", "{071A4C22-CE96-4989-8271-E5538BF60C0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8E29BB22-9912-489C-884A-7FD31034211B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E29BB22-9912-489C-884A-7FD31034211B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E29BB22-9912-489C-884A-7FD31034211B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{071A4C22-CE96-4989-8271-E5538BF60C0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071A4C22-CE96-4989-8271-E5538BF60C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071A4C22-CE96-4989-8271-E5538BF60C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071A4C22-CE96-4989-8271-E5538BF60C0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
