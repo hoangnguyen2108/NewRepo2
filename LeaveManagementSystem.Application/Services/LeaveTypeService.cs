@@ -1,8 +1,8 @@
-﻿using LeaveManagementSystem.Data;
-using LeaveManagementSystem.Models.LeaveTypes;
+﻿using LeaveManagementSystem.Application.Models.LeaveTypes;
+using LeaveManagementSystem.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace LeaveManagementSystem.Services
+namespace LeaveManagementSystem.Application.Services
 {
     public class LeaveTypeService : ILeaveTypeService
     {
@@ -66,10 +66,10 @@ namespace LeaveManagementSystem.Services
 
         }
 
-           public bool LeaveTypeExists(int id)
-          {
-               return _context.LeaveTypes.Any(e => e.Id == id);
-          }
+        public bool LeaveTypeExists(int id)
+        {
+            return _context.LeaveTypes.Any(e => e.Id == id);
+        }
 
         public async Task<T?> Get<T>(int id) where T : class
         {

@@ -1,10 +1,10 @@
-﻿namespace LeaveManagementSystem.Models.LeaveTypes
+﻿namespace LeaveManagementSystem.Application.Models.LeaveTypes
 {
-    public abstract class BaseLeaveType
+    public class LeaveTypeReadOnlyVM
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public int Days { get; set; }
-       
+
     }
 }

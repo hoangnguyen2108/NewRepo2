@@ -6,7 +6,7 @@ namespace LeaveManagementSystem.Data
     {
         [Key]
         public int PeriodId { get; set; }
-        
+
         public DateOnly StartDate { get; set; }
         public DateOnly EndDate { get; set; }
     }

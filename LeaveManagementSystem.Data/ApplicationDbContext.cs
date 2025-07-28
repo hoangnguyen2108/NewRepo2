@@ -43,10 +43,10 @@ namespace LeaveManagementSystem.Data
                 NormalizedUserName = "USER1admin",
                 Email = "user1adin@gmail.com",
                 NormalizedEmail = "USER1admin@GMAIL.COM",
-                PasswordHash =hasher.HashPassword(null, "lONGBADAO123@"),
+                PasswordHash = hasher.HashPassword(null, "lONGBADAO123@"),
                 EmailConfirmed = true,
-                FirstName ="Jay",
-                LastName ="Van",
+                FirstName = "Jay",
+                LastName = "Van",
                 DateOfBirth = new DateOnly(1990, 1, 1)
 
             },
@@ -84,7 +84,7 @@ namespace LeaveManagementSystem.Data
         public DbSet<LeaveType> LeaveTypes { get; set; }
         public DbSet<LeaveALocation> leaveALocations { get; set; }
         public DbSet<Period> Periods { get; set; }
-        
+
 
 
     }

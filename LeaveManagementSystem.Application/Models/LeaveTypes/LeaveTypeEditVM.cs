@@ -1,4 +1,4 @@
-﻿namespace LeaveManagementSystem.Models.LeaveTypes
+﻿namespace LeaveManagementSystem.Application.Models.LeaveTypes
 {
     public class LeaveTypeEditVM
     {
