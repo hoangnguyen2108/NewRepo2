@@ -1,6 +1,4 @@
-﻿using LeaveManagementSystem.Controllers;
-using LeaveManagementSystem.Models.LeaveTypes;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
